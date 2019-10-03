@@ -63,7 +63,6 @@
     "raw-loader": "^2.0.0",
     "requirejs": "^2.3.6",
     "serve": "^11.0.0",
-    "snyk": "^1.150.0",
     "text": "github:requirejs/text#d04de4ffd7bf5ba6cb80cdca2d40d4f6f52a1b1f",
     "typescript": "^3.4.3",
     "webidl2": "^18.0.1",
@@ -81,7 +80,7 @@
     "copydeps": "node ./tools/copydeps.js",
     "karma": "karma start --single-run",
     "lint": "tsc -p src/jsconfig.json && eslint .",
-    "prepare": "npm run build:components",
+    "prepare": "npm run snyk-protect && npm run build:components",
     "release": "node ./tools/release.js",
     "server": "npm start",
     "snyk-protect": "snyk protect",
@@ -99,7 +98,8 @@
     "fs-extra": "^7.0.1",
     "loading-indicator": "^2.0.0",
     "prompt": "^1.0.0",
-    "puppeteer": "^1.14.0"
+    "puppeteer": "^1.14.0",
+    "snyk": "^1.230.5"
   },
   "prettier": {
     "trailingComma": "es5"
